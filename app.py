@@ -1,6 +1,5 @@
 import streamlit as st
 import tensorflow as tf 
-from keras_preprocessing.text import tokenizer_from_json
 import json
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
@@ -11,7 +10,7 @@ def load_models():
     # model_auto = load_model(‘models/auto_model.h5’, compile=False)
     with open('models/increase_vocab-3/tokenizer.json') as f:
         data = json.load(f)
-        tokenizer = tokenizer_from_json(data)
+        tokenizer = tf.keras.preprocessing.text.tokenizer_from_json(data)
     return model_eval,tokenizer
 
 model,tokenizer=load_models()
