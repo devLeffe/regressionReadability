@@ -1,5 +1,3 @@
-from pathlib import Path
-import pandas as pd
 import streamlit as st
 import tensorflow as tf 
 from keras_preprocessing.text import tokenizer_from_json

@@ -1,0 +1,5 @@
+streamlit
+tensorflow
+tokenizer_from_json
+json
+pad_sequences
